@@ -1,5 +1,6 @@
 package ca.georgebrown.game2011.midterm_memorygame;
 
+import android.view.View;
 import android.widget.ImageView;
 
 /**
@@ -71,6 +72,14 @@ public class Card {
         flipped = false;
         view = v;
         view.setClickable(true);
+
+        view.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                flip();
+                draw();
+            }
+        });
     }
 
     public int getValue(){
