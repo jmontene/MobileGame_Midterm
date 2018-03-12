@@ -3,7 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/MobileGame_Midterm.iml" filepath="$PROJECT_DIR$/MobileGame_Midterm.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MobileGame_Midterm.iml" filepath="$PROJECT_DIR$/MobileGame_Midterm.iml" />
       <module fileurl="file://C:\Users\mjose\InUse\repos\Games\Homework\Winter_2018\Mobile_Game_Fundamentals\MobileGame_Midterm\.idea\modules\MobileGame_Midterm.iml" filepath="C:\Users\mjose\InUse\repos\Games\Homework\Winter_2018\Mobile_Game_Fundamentals\MobileGame_Midterm\.idea\modules\MobileGame_Midterm.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
