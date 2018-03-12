@@ -86,7 +86,7 @@ public class Card {
     }
 
     public void draw(){
-        if(!flipped){
+        if(flipped){
             view.setImageResource(cardIDs[value]);
         }else{
             view.setImageResource(R.drawable.cardback);

@@ -8,8 +8,6 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Random;
 
-import java.util.ArrayList;
-
 public class MainActivity extends Activity {
     ArrayList<Card> cards;
     ArrayList<Integer> selectedCards;
@@ -40,15 +38,15 @@ public class MainActivity extends Activity {
         HashSet<Integer> chosenIndices = new HashSet<Integer>();
         while(chosenIndices.size() < 16){
             int idx1 = rng.nextInt(16);
-            while(!chosenIndices.contains(idx1)){
-                idx1 = rng.nextInt(52);
+            while(chosenIndices.contains(idx1)){
+                idx1 = rng.nextInt(16);
             }
             cards.get(idx1).setValue(selectedCards.get(selectedIndex));
             chosenIndices.add(idx1);
 
             int idx2 = rng.nextInt(16);
-            while(!chosenIndices.contains(idx1)){
-                idx2 = rng.nextInt(52);
+            while(chosenIndices.contains(idx2)){
+                idx2 = rng.nextInt(16);
             }
             cards.get(idx2).setValue(selectedCards.get(selectedIndex++));
             chosenIndices.add(idx2);
@@ -57,13 +55,11 @@ public class MainActivity extends Activity {
         drawCards();
     }
 
-    protected void drawCards(){
-        for(Card c : cards){
+    protected void drawCards() {
+        for (Card c : cards) {
             c.draw();
         }
     }
-
-    ArrayList<card>
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
