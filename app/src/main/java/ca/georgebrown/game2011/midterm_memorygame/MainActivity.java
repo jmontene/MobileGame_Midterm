@@ -8,6 +8,8 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Random;
 
+import java.util.ArrayList;
+
 public class MainActivity extends Activity {
     ArrayList<Card> cards;
     ArrayList<Integer> selectedCards;
@@ -60,6 +62,8 @@ public class MainActivity extends Activity {
             c.draw();
         }
     }
+
+    ArrayList<card>
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
