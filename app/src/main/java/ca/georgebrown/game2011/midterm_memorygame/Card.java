@@ -7,7 +7,7 @@ import android.widget.ImageView;
  * Created by mjose on 2018-03-12.
  */
 
-public class Card {
+public class Card{
     public static int[] cardIDs = {
             R.drawable.card_1c,
             R.drawable.card_1d,
@@ -63,23 +63,24 @@ public class Card {
             R.drawable.card_13s
     };
 
+    public static Card cardClicked;
+    public static int numCards = 0;
+
     int value;
     ImageView view;
     boolean flipped;
+    MemoryGame game;
+    String name;
 
-    public Card(int val, ImageView v){
+    public Card(int val, ImageView v, MemoryGame g){
         value = val;
         flipped = false;
         view = v;
-        view.setClickable(true);
+        name = "card_" + (++numCards);
 
-        view.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View view){
-                flip();
-                draw();
-            }
-        });
+        view.setClickable(true);
+        setGame(g);
+        view.setOnClickListener(new CardClickListener(this, game));
     }
 
     public int getValue(){
@@ -92,6 +93,7 @@ public class Card {
 
     public void flip(){
         flipped = !flipped;
+        draw();
     }
 
     public void draw(){
@@ -100,5 +102,17 @@ public class Card {
         }else{
             view.setImageResource(R.drawable.cardback);
         }
+    }
+
+    public void setGame(MemoryGame g){
+        game = g;
+    }
+
+    public void setInvisible() {
+        view.setVisibility(View.INVISIBLE);
+    }
+
+    public void setVisible() {
+        view.setVisibility(View.VISIBLE);
     }
 }
