@@ -1,6 +1,6 @@
 //**********************************************************************************
 // [[App Name]]
-// Me
+//
 // Mid-Term Exam: Memory Game App
 // [[Authors]]
 // Jamie Chingchun Huang – 101088322

@@ -49,7 +49,7 @@
         android:src="@drawable/cardback"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.069"
         app:layout_constraintStart_toEndOf="@+id/card_2"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
@@ -65,7 +65,7 @@
         android:src="@drawable/cardback"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.714"
+        app:layout_constraintHorizontal_bias="0.357"
         app:layout_constraintStart_toEndOf="@+id/card_3"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
@@ -94,7 +94,7 @@
         android:id="@+id/card_7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
+        android:layout_marginStart="28dp"
         android:layout_marginTop="24dp"
         android:src="@drawable/cardback"
         app:layout_constraintStart_toEndOf="@+id/card_6"
@@ -109,7 +109,7 @@
         android:layout_marginTop="24dp"
         android:src="@drawable/cardback"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.714"
+        app:layout_constraintHorizontal_bias="0.357"
         app:layout_constraintStart_toEndOf="@+id/card_7"
         app:layout_constraintTop_toBottomOf="@+id/card_4" />
 
@@ -127,20 +127,17 @@
         android:id="@+id/card_10"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
         android:layout_marginStart="24dp"
         android:layout_marginTop="28dp"
         android:src="@drawable/cardback"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/card_9"
-        app:layout_constraintTop_toBottomOf="@+id/card_6"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/card_6" />
 
     <ImageView
         android:id="@+id/card_11"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
+        android:layout_marginStart="28dp"
         android:layout_marginTop="28dp"
         android:src="@drawable/cardback"
         app:layout_constraintStart_toEndOf="@+id/card_10"
@@ -155,7 +152,7 @@
         android:layout_marginTop="28dp"
         android:src="@drawable/cardback"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.724"
+        app:layout_constraintHorizontal_bias="0.392"
         app:layout_constraintStart_toEndOf="@+id/card_11"
         app:layout_constraintTop_toBottomOf="@+id/card_8" />
 
@@ -173,7 +170,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/card_9"
-        app:layout_constraintVertical_bias="0.511" />
+        app:layout_constraintVertical_bias="0.302" />
 
     <ImageView
         android:id="@+id/card_14"
@@ -185,8 +182,8 @@
         android:src="@drawable/cardback"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/card_13"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.949" />
+        app:layout_constraintTop_toBottomOf="@+id/card_10"
+        app:layout_constraintVertical_bias="0.302" />
 
     <ImageView
         android:id="@+id/card_15"
@@ -199,10 +196,10 @@
         android:src="@drawable/cardback"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/card_16"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.35"
         app:layout_constraintStart_toEndOf="@+id/card_14"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.949" />
+        app:layout_constraintTop_toBottomOf="@+id/card_11"
+        app:layout_constraintVertical_bias="0.302" />
 
     <ImageView
         android:id="@+id/card_16"
@@ -215,10 +212,10 @@
         android:src="@drawable/cardback"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.973"
+        app:layout_constraintHorizontal_bias="0.95"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.949" />
+        app:layout_constraintTop_toBottomOf="@+id/card_12"
+        app:layout_constraintVertical_bias="0.302" />
 
     <TextView
         android:id="@+id/score"
