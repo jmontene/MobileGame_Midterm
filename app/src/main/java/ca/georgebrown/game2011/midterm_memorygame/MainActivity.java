@@ -1,7 +1,7 @@
 //**********************************************************************************
 // [[App Name]]
+// Midterm_MemoryGame
 //
-// Mid-Term Exam: Memory Game App
 // [[Authors]]
 // Jamie Chingchun Huang – 101088322
 // Jose Montenegro Avariano – 101085465
@@ -9,13 +9,11 @@
 // [[Creation Date]] Mar 12, 2018
 //
 // [[The Source file name]]
-// * MainActivity.java
+// * MainActivity.java, MemoryGame.java, CardClickListener.java, Card.java
 //
 //
 // [[Description]]
-// * Small memory game
-// * Random cards work
-// * Flip works
+// * Memory game working well
 //
 //***********************************************************************************
 

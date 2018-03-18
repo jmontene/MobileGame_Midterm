@@ -1,5 +1,26 @@
+//**********************************************************************************
+// [[App Name]]
+// Midterm_MemoryGame
+//
+// [[Authors]]
+// Jamie Chingchun Huang – 101088322
+// Jose Montenegro Avariano – 101085465
+//
+// [[Creation Date]] Mar 12, 2018
+//
+// [[The Source file name]]
+// * MainActivity.java, MemoryGame.java, CardClickListener.java, Card.java
+//
+//
+// [[Description]]
+// * Memory game working well
+//
+//***********************************************************************************
+
 package ca.georgebrown.game2011.midterm_memorygame;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.os.Handler;
 import android.widget.ImageView;
 
@@ -35,6 +56,9 @@ public class MemoryGame {
     int score = 0;
     int time = 30;
     int tappedCards = 0;
+    int visibleCards = 16;
+
+    AlertDialog.Builder againMsg;
 
     public MemoryGame(Activity activity){
         parent = activity;
@@ -58,6 +82,7 @@ public class MemoryGame {
                 tappedCards = 0;
             }
         };
+
         invisibleRunnable = new Runnable(){
             @Override
             public void run(){
@@ -66,15 +91,17 @@ public class MemoryGame {
                 tappedCards = 0;
             }
         };
+
         timerRunnable = new Runnable(){
             @Override
             public void run(){
-                time -= 1;
                 timerLabel.setText(String.valueOf(time));
+                time -= 1;
 
-                if(time > 0){
+                if(time >= 0){
                     operationsHandler.postDelayed(timerRunnable, 1000);
                 }else{
+                    againMsg.setMessage("Time's Up."+" Score: "+ score+"." +" Play Again?");
                     gameEnd();
                 }
             }
@@ -86,6 +113,9 @@ public class MemoryGame {
         pickLabel = (TextView) parent.findViewById(R.id.pickLabel);
         scoreLabel = (TextView) parent.findViewById(R.id.scoreLabel);
         timerLabel = (TextView) parent.findViewById(R.id.timer);
+
+        againMsg = new AlertDialog.Builder(parent);
+
     }
 
     public void pickCard(Card c){
@@ -106,6 +136,12 @@ public class MemoryGame {
                 operationsHandler.postDelayed(invisibleRunnable, 500);
                 score += 1;
                 scoreLabel.setText(String.valueOf(score));
+                visibleCards -=2;
+                if(visibleCards == 0){
+                    operationsHandler.removeCallbacks(timerRunnable);
+                    againMsg.setMessage("Nice! All Clear. Play Again?");
+                    gameEnd();
+                }
             }else{
                 operationsHandler.postDelayed(flipRunnable, 500);
             }
@@ -165,8 +201,26 @@ public class MemoryGame {
     }
 
     public void gameEnd(){
-        for(int i=0;i<cards.size();++i){
-            cards.get(i).setInvisible();
+
+        if(visibleCards > 0){
+            for(int i=0;i<cards.size();++i){
+                cards.get(i).setInvisible();
+            }
         }
+
+        againMsg.setPositiveButton("Play Again", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int id) {
+                parent.recreate();
+        }
+        });
+
+        againMsg.setNegativeButton("Exit Game", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int id) {
+                parent.finish();
+        }
+        });
+
+        AlertDialog alertDialog = againMsg.create();
+        alertDialog.show();
     }
 }
